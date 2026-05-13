@@ -1,0 +1,47 @@
+{
+  "name": "@lijuhong1981/postprocessing",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "module": "index.js",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.js",
+    "docs:clean": "rimraf docs",
+    "docs:generate": "jsdoc -c jsdoc.json README.md",
+    "docs": "npm run docs:clean && npm run docs:generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lijuhong1981/tslPostProcessing.git"
+  },
+  "keywords": [
+    "three",
+    "tsl",
+    "postprocessing",
+    "webgpu"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lijuhong1981/tslPostProcessing/issues"
+  },
+  "homepage": "https://github.com/lijuhong1981/tslPostProcessing#readme",
+  "dependencies": {
+    "@lijuhong1981/jslibs": "^1.4.25",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^1.0.0",
+    "jsdoc": "^4.0.5",
+    "rimraf": "^5.0.10",
+    "rollup": "^4.60.3",
+    "rollup-plugin-delete": "^3.0.2"
+  }
+}

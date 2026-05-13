@@ -1,0 +1,28 @@
+{
+    "source": {
+        "include": [
+            "src"
+        ],
+        "exclude": [
+            "src/OutlineNode.js"
+        ],
+        "excludePattern": "three"
+    },
+    "opts": {
+        "destination": "docs",
+        "private": true,
+        "recurse": true,
+        "template": "templates/docdash"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "docdash": {
+        "static": true,
+        "sort": true,
+        "private": false,
+        "search": true,
+        "typedefs": true,
+        "collapse": true
+    }
+}

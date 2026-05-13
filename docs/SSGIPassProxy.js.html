@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>SSGIPassProxy.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AntiAliasingPassProxy.html">AntiAliasingPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#fxaaPass">fxaaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#method">method</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#smaaPass">smaaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#ssaaPass">ssaaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#taauPass">taauPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#traaPass">traaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#.Method">Method</a></li></ul></li><li><a href="BloomPassProxy.html">BloomPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#radius">radius</a></li><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#smoothWidth">smoothWidth</a></li><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#strength">strength</a></li><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#threshold">threshold</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="BloomPassProxy.html#build">build</a></li></ul></li><li><a href="FXAAPassProxy.html">FXAAPassProxy</a><ul class='methods'><li data-type='method' style='display: none;'><a href="FXAAPassProxy.html#build">build</a></li></ul></li><li><a href="GTAOPassProxy.html">GTAOPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#distanceExponent">distanceExponent</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#distanceFallOff">distanceFallOff</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#radius">radius</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#resolutionScale">resolutionScale</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#samples">samples</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#scale">scale</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#thickness">thickness</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#useTemporalFiltering">useTemporalFiltering</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="GTAOPassProxy.html#build">build</a></li></ul></li><li><a href="OutlinePassProxy.html">OutlinePassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#downSampleRatio">downSampleRatio</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#edgeGlow">edgeGlow</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#edgeStrength">edgeStrength</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#edgeThickness">edgeThickness</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#hiddenEdgeColor">hiddenEdgeColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#hiddenEdgeColor">hiddenEdgeColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#highlightColor">highlightColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#highlightColor">highlightColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#highlightStrength">highlightStrength</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#pulsePeriod">pulsePeriod</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#selectedObjects">selectedObjects</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#useHighlight">useHighlight</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#visibleEdgeColor">visibleEdgeColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#visibleEdgeColor">visibleEdgeColor</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="OutlinePassProxy.html#build">build</a></li></ul></li><li><a href="PassNodeProxy.html">PassNodeProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#changed">changed</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#enabled">enabled</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#isBuilt">isBuilt</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#library">library</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#node">node</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#build">build</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#checkBuilt">checkBuilt</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#dispose">dispose</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#rebuild">rebuild</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#setValues">setValues</a></li></ul></li><li><a href="PostProcessingLibrary.html">PostProcessingLibrary</a><ul class='members'><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#aaPass">aaPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#aoPass">aoPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#bloomPass">bloomPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#camera">camera</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#enabled">enabled</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#mainLight">mainLight</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#needsUpdate">needsUpdate</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#outlinePass">outlinePass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#renderPipeline">renderPipeline</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#renderer">renderer</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#scene">scene</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#ssgiPass">ssgiPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#ssrPass">ssrPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#sssPass">sssPass</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="PostProcessingLibrary.html#build">build</a></li><li data-type='method' style='display: none;'><a href="PostProcessingLibrary.html#dispose">dispose</a></li><li data-type='method' style='display: none;'><a href="PostProcessingLibrary.html#render">render</a></li></ul></li><li><a href="SMAAPassProxy.html">SMAAPassProxy</a><ul class='methods'><li data-type='method' style='display: none;'><a href="SMAAPassProxy.html#build">build</a></li></ul></li><li><a href="SSAAPassProxy.html">SSAAPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSAAPassProxy.html#sampleLevel">sampleLevel</a></li><li data-type='member' style='display: none;'><a href="SSAAPassProxy.html#unbiased">unbiased</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSAAPassProxy.html#build">build</a></li></ul></li><li><a href="SSGIPassProxy.html">SSGIPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#aoIntensity">aoIntensity</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#backfaceLighting">backfaceLighting</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#expFactor">expFactor</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#giIntensity">giIntensity</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#radius">radius</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#sliceCount">sliceCount</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#stepCount">stepCount</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#thickness">thickness</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#useLinearThickness">useLinearThickness</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#useScreenSpaceSampling">useScreenSpaceSampling</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#useTemporalFiltering">useTemporalFiltering</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSGIPassProxy.html#build">build</a></li></ul></li><li><a href="SSRPassProxy.html">SSRPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#blurQuality">blurQuality</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#maxDistance">maxDistance</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#opacity">opacity</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#quality">quality</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#resolutionScale">resolutionScale</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#thickness">thickness</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSRPassProxy.html#build">build</a></li></ul></li><li><a href="SSSPassProxy.html">SSSPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#maxDistance">maxDistance</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#quality">quality</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#resolutionScale">resolutionScale</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#shadowIntensity">shadowIntensity</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#thickness">thickness</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#useTemporalFiltering">useTemporalFiltering</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSSPassProxy.html#build">build</a></li></ul></li><li><a href="TAAUPassProxy.html">TAAUPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#currentFrameWeight">currentFrameWeight</a></li><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#depthThreshold">depthThreshold</a></li><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#edgeDepthDiff">edgeDepthDiff</a></li><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#maxVelocityLength">maxVelocityLength</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="TAAUPassProxy.html#build">build</a></li></ul></li><li><a href="TRAAPassProxy.html">TRAAPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#depthThreshold">depthThreshold</a></li><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#edgeDepthDiff">edgeDepthDiff</a></li><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#maxVelocityLength">maxVelocityLength</a></li><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#useSubpixelCorrection">useSubpixelCorrection</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="TRAAPassProxy.html#build">build</a></li></ul></li><li><a href="WireframePass.html">WireframePass</a><ul class='members'><li data-type='member' style='display: none;'><a href="WireframePass.html#changed">changed</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#color">color</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#linewidth">linewidth</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#selectedObjects">selectedObjects</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#wireframeMaterial">wireframeMaterial</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="WireframePass.html#dispose">dispose</a></li><li data-type='method' style='display: none;'><a href="WireframePass.html#render">render</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#AntiAliasingMethod">AntiAliasingMethod</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">SSGIPassProxy.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Check from "@lijuhong1981/jscheck/src/Check.js";
+import PassNodeProxy from "./PassNodeProxy.js";
+import SSGINode, { ssgi } from 'three/addons/tsl/display/SSGINode.js';
+import { Camera, Node, TextureNode } from "three/webgpu";
+import { add, vec4 } from "three/tsl";
+
+/**
+ * SSGIPassProxy是PassNodeProxy的一个子类，用于代理SSGI（Screen Space Global Illumination）后处理特效的Pass节点。
+ * @class
+ * @extends PassNodeProxy&lt;SSGINode>
+*/
+class SSGIPassProxy extends PassNodeProxy {
+    constructor(library) {
+        super(library);
+        this._values = {
+            sliceCount: 2,
+            stepCount: 8,
+            aoIntensity: 0,
+            giIntensity: 10,
+            radius: 12,
+            useScreenSpaceSampling: false,
+            expFactor: 2,
+            thickness: 1,
+            useLinearThickness: true,
+            backfaceLighting: 0,
+            useTemporalFiltering: true,
+        };
+    }
+    /**
+     * Number of per-pixel hemisphere slices. This has a big performance cost and should be kept as low as possible.
+     * Should be in the range `[1, 4]`.
+     *
+     * @type {number}
+     * @default 2
+     */
+    set sliceCount(value) {
+        Check.typeOf.number('sliceCount', value);
+        this._values.sliceCount = value;
+        this.node &amp;&amp; (this.node.sliceCount.value = value);
+    }
+    get sliceCount() {
+        return this._values.sliceCount;
+    }
+    /**
+     * Number of samples taken along one side of a given hemisphere slice. This has a big performance cost and should
+     * be kept as low as possible.  Should be in the range `[1, 32]`.
+     *
+     * @type {number}
+     * @default 8
+     */
+    set stepCount(value) {
+        Check.typeOf.number('stepCount', value);
+        this._values.stepCount = value;
+        this.node &amp;&amp; (this.node.stepCount.value = value);
+    }
+    get stepCount() {
+        return this._values.stepCount;
+    }
+    /**
+     * Power function applied to AO to make it appear darker/lighter. Should be in the range `[0, 4]`.
+     *
+     * @type {number}
+     * @default 0
+     */
+    set aoIntensity(value) {
+        Check.typeOf.number('aoIntensity', value);
+        this._values.aoIntensity = value;
+        this.node &amp;&amp; (this.node.aoIntensity.value = value);
+    }
+    get aoIntensity() {
+        return this._values.aoIntensity;
+    }
+    /**
+     * Intensity of the indirect diffuse light. Should be in the range `[0, 100]`.
+     *
+     * @type {number}
+     * @default 10
+     */
+    set giIntensity(value) {
+        Check.typeOf.number('giIntensity', value);
+        this._values.giIntensity = value;
+        this.node &amp;&amp; (this.node.giIntensity.value = value);
+    }
+    get giIntensity() {
+        return this._values.giIntensity;
+    }
+    /**
+     * Effective sampling radius in world space. AO and GI can only have influence within that radius.
+     * Should be in the range `[1, 25]`.
+     *
+     * @type {number}
+     * @default 12
+     */
+    set radius(value) {
+        Check.typeOf.number('radius', value);
+        this._values.radius = value;
+        this.node &amp;&amp; (this.node.radius.value = value);
+    }
+    get radius() {
+        return this._values.radius;
+    }
+    /**
+     * Makes the sample distance in screen space instead of world-space (helps having more detail up close).
+     *
+     * @type {boolean}
+     * @default false
+     */
+    set useScreenSpaceSampling(value) {
+        Check.typeOf.boolean('useScreenSpaceSampling', value);
+        this._values.useScreenSpaceSampling = value;
+        this.node &amp;&amp; (this.node.useScreenSpaceSampling.value = value);
+    }
+    get useScreenSpaceSampling() {
+        return this._values.useScreenSpaceSampling;
+    }
+    /**
+     * Controls samples distribution. It's an exponent applied at each step get increasing step size over the distance.
+     * Should be in the range `[1, 3]`.
+     *
+     * @type {number}
+     * @default 2
+     */
+    set expFactor(value) {
+        Check.typeOf.number('expFactor', value);
+        this._values.expFactor = value;
+        this.node &amp;&amp; (this.node.expFactor.value = value);
+    }
+    get expFactor() {
+        return this._values.expFactor;
+    }
+    /**
+     * Constant thickness value of objects on the screen in world units. Allows light to pass behind surfaces past that thickness value.
+     * Should be in the range `[0.01, 10]`.
+     *
+     * @type {number}
+     * @default 1
+     */
+    set thickness(value) {
+        Check.typeOf.number('thickness', value);
+        this._values.thickness = value;
+        this.node &amp;&amp; (this.node.thickness.value = value);
+    }
+    get thickness() {
+        return this._values.thickness;
+    }
+    /**
+     * Whether to increase thickness linearly over distance or not (avoid losing detail over the distance).
+     *
+     * @type {boolean}
+     * @default false
+     */
+    set useLinearThickness(value) {
+        Check.typeOf.boolean('useLinearThickness', value);
+        this._values.useLinearThickness = value;
+        this.node &amp;&amp; (this.node.useLinearThickness.value = value);
+    }
+    get useLinearThickness() {
+        return this._values.useLinearThickness;
+    }
+    /**
+     * How much light backface surfaces emit.
+     * Should be in the range `[0, 1]`.
+     *
+     * @type {number}
+     * @default 0
+     */
+    set backfaceLighting(value) {
+        Check.typeOf.number('backfaceLighting', value);
+        this._values.backfaceLighting = value;
+        this.node &amp;&amp; (this.node.backfaceLighting.value = value);
+    }
+    get backfaceLighting() {
+        return this._values.backfaceLighting;
+    }
+    /**
+     * Whether to use temporal filtering or not. Setting this property to
+     * `true` requires the usage of `TRAANode`. This will help to reduce noise
+     * although it introduces typical TAA artifacts like ghosting and temporal instabilities.
+     *
+     * If setting this property to `false`, a manual denoise via `DenoiseNode` is required.
+     *
+     * @type {boolean}
+     * @default true
+     */
+    set useTemporalFiltering(value) {
+        Check.typeOf.boolean('useTemporalFiltering', value);
+        this._values.useTemporalFiltering = value;
+        this.node &amp;&amp; (this.node.useTemporalFiltering = value);
+    }
+    get useTemporalFiltering() {
+        return this._values.useTemporalFiltering;
+    }
+    /**
+     * 构建SSGI Pass节点。
+     * @param {TextureNode} colorNode - 颜色节点对象 
+     * @param {TextureNode} depthNode - 深度节点对象
+     * @param {TextureNode} normalNode - 法线节点对象
+     * @param {Camera} camera - 相机对象
+     * @param {TextureNode} diffuseNode - 漫反射节点对象
+     * @param {TextureNode} outputNode - 输出节点对象
+     * @returns {Node} 处理后的节点对象
+     * @override
+    */
+    build(colorNode, depthNode, normalNode, camera, diffuseNode, outputNode) {
+        const ssgiPass = this.node = ssgi(colorNode, depthNode, normalNode, camera);
+        this.setValues(this._values);
+        const gi = ssgiPass.rgb.toInspector('SSGI');
+        const ao = ssgiPass.a.toInspector('SSAO');
+        // const compositePass = vec4(add(outputNode.rgb.mul(ao), (diffuseNode.rgb.mul(gi))), outputNode.a);
+        // compositePass.name = 'SSGI-Composite';
+        // return compositePass;
+        outputNode.rgb.mul(ao).add(diffuseNode.rgb.mul(gi));
+        return outputNode;
+    }
+};
+
+export default SSGIPassProxy;
+export { SSGIPassProxy };</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a> on Wed May 13 2026 11:30:26 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>

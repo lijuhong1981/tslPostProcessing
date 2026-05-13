@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>PassNodeProxy - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AntiAliasingPassProxy.html">AntiAliasingPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#fxaaPass">fxaaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#method">method</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#smaaPass">smaaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#ssaaPass">ssaaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#taauPass">taauPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#traaPass">traaPass</a></li><li data-type='member' style='display: none;'><a href="AntiAliasingPassProxy.html#.Method">Method</a></li></ul></li><li><a href="BloomPassProxy.html">BloomPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#radius">radius</a></li><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#smoothWidth">smoothWidth</a></li><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#strength">strength</a></li><li data-type='member' style='display: none;'><a href="BloomPassProxy.html#threshold">threshold</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="BloomPassProxy.html#build">build</a></li></ul></li><li><a href="FXAAPassProxy.html">FXAAPassProxy</a><ul class='methods'><li data-type='method' style='display: none;'><a href="FXAAPassProxy.html#build">build</a></li></ul></li><li><a href="GTAOPassProxy.html">GTAOPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#distanceExponent">distanceExponent</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#distanceFallOff">distanceFallOff</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#radius">radius</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#resolutionScale">resolutionScale</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#samples">samples</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#scale">scale</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#thickness">thickness</a></li><li data-type='member' style='display: none;'><a href="GTAOPassProxy.html#useTemporalFiltering">useTemporalFiltering</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="GTAOPassProxy.html#build">build</a></li></ul></li><li><a href="OutlinePassProxy.html">OutlinePassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#downSampleRatio">downSampleRatio</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#edgeGlow">edgeGlow</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#edgeStrength">edgeStrength</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#edgeThickness">edgeThickness</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#hiddenEdgeColor">hiddenEdgeColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#hiddenEdgeColor">hiddenEdgeColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#highlightColor">highlightColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#highlightColor">highlightColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#highlightStrength">highlightStrength</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#pulsePeriod">pulsePeriod</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#selectedObjects">selectedObjects</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#useHighlight">useHighlight</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#visibleEdgeColor">visibleEdgeColor</a></li><li data-type='member' style='display: none;'><a href="OutlinePassProxy.html#visibleEdgeColor">visibleEdgeColor</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="OutlinePassProxy.html#build">build</a></li></ul></li><li><a href="PassNodeProxy.html">PassNodeProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#changed">changed</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#enabled">enabled</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#isBuilt">isBuilt</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#library">library</a></li><li data-type='member' style='display: none;'><a href="PassNodeProxy.html#node">node</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#build">build</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#checkBuilt">checkBuilt</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#dispose">dispose</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#rebuild">rebuild</a></li><li data-type='method' style='display: none;'><a href="PassNodeProxy.html#setValues">setValues</a></li></ul></li><li><a href="PostProcessingLibrary.html">PostProcessingLibrary</a><ul class='members'><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#aaPass">aaPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#aoPass">aoPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#bloomPass">bloomPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#camera">camera</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#enabled">enabled</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#mainLight">mainLight</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#needsUpdate">needsUpdate</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#outlinePass">outlinePass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#renderPipeline">renderPipeline</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#renderer">renderer</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#scene">scene</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#ssgiPass">ssgiPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#ssrPass">ssrPass</a></li><li data-type='member' style='display: none;'><a href="PostProcessingLibrary.html#sssPass">sssPass</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="PostProcessingLibrary.html#build">build</a></li><li data-type='method' style='display: none;'><a href="PostProcessingLibrary.html#dispose">dispose</a></li><li data-type='method' style='display: none;'><a href="PostProcessingLibrary.html#render">render</a></li></ul></li><li><a href="SMAAPassProxy.html">SMAAPassProxy</a><ul class='methods'><li data-type='method' style='display: none;'><a href="SMAAPassProxy.html#build">build</a></li></ul></li><li><a href="SSAAPassProxy.html">SSAAPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSAAPassProxy.html#sampleLevel">sampleLevel</a></li><li data-type='member' style='display: none;'><a href="SSAAPassProxy.html#unbiased">unbiased</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSAAPassProxy.html#build">build</a></li></ul></li><li><a href="SSGIPassProxy.html">SSGIPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#aoIntensity">aoIntensity</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#backfaceLighting">backfaceLighting</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#expFactor">expFactor</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#giIntensity">giIntensity</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#radius">radius</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#sliceCount">sliceCount</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#stepCount">stepCount</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#thickness">thickness</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#useLinearThickness">useLinearThickness</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#useScreenSpaceSampling">useScreenSpaceSampling</a></li><li data-type='member' style='display: none;'><a href="SSGIPassProxy.html#useTemporalFiltering">useTemporalFiltering</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSGIPassProxy.html#build">build</a></li></ul></li><li><a href="SSRPassProxy.html">SSRPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#blurQuality">blurQuality</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#maxDistance">maxDistance</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#opacity">opacity</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#quality">quality</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#resolutionScale">resolutionScale</a></li><li data-type='member' style='display: none;'><a href="SSRPassProxy.html#thickness">thickness</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSRPassProxy.html#build">build</a></li></ul></li><li><a href="SSSPassProxy.html">SSSPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#maxDistance">maxDistance</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#quality">quality</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#resolutionScale">resolutionScale</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#shadowIntensity">shadowIntensity</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#thickness">thickness</a></li><li data-type='member' style='display: none;'><a href="SSSPassProxy.html#useTemporalFiltering">useTemporalFiltering</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="SSSPassProxy.html#build">build</a></li></ul></li><li><a href="TAAUPassProxy.html">TAAUPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#currentFrameWeight">currentFrameWeight</a></li><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#depthThreshold">depthThreshold</a></li><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#edgeDepthDiff">edgeDepthDiff</a></li><li data-type='member' style='display: none;'><a href="TAAUPassProxy.html#maxVelocityLength">maxVelocityLength</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="TAAUPassProxy.html#build">build</a></li></ul></li><li><a href="TRAAPassProxy.html">TRAAPassProxy</a><ul class='members'><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#depthThreshold">depthThreshold</a></li><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#edgeDepthDiff">edgeDepthDiff</a></li><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#maxVelocityLength">maxVelocityLength</a></li><li data-type='member' style='display: none;'><a href="TRAAPassProxy.html#useSubpixelCorrection">useSubpixelCorrection</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="TRAAPassProxy.html#build">build</a></li></ul></li><li><a href="WireframePass.html">WireframePass</a><ul class='members'><li data-type='member' style='display: none;'><a href="WireframePass.html#changed">changed</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#color">color</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#linewidth">linewidth</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#selectedObjects">selectedObjects</a></li><li data-type='member' style='display: none;'><a href="WireframePass.html#wireframeMaterial">wireframeMaterial</a></li></ul><ul class='methods'><li data-type='method' style='display: none;'><a href="WireframePass.html#dispose">dispose</a></li><li data-type='method' style='display: none;'><a href="WireframePass.html#render">render</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#AntiAliasingMethod">AntiAliasingMethod</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">PassNodeProxy</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        
+            PassNodeProxy
+        
+        </h2>
+        
+            <div class="class-description usertext"><p>PassNodeProxy是一个针对Node节点对象的代理类，用于管理threejs最新tsl体系下的Node节点对象，对外提供更加友好的接口。</p></div>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="PassNodeProxy"><span class="type-signature type-signature-abstract">(abstract) </span>new PassNodeProxy<span class="signature">(library)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>构造函数</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line13">line 13</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>library</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="PostProcessingLibrary.html">PostProcessingLibrary</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>后处理库实例</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="changed"><span class="type-signature type-signature-readonly">(readonly) </span>changed<span class="type-signature"> :EventSubscriber</span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>属性值变化事件，当Pass节点的属性值发生变化时触发。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line38">line 38</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>属性值变化事件，当Pass节点的属性值发生变化时触发。</p>
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">EventSubscriber</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="enabled"><span class="type-signature"></span>enabled<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>是否启用该Pass。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line63">line 63</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-default">Default Value:</dt>
+    <dd class="tag-default"><ul class="dummy">
+            <li>false</li>
+        </ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>是否启用该Pass。</p>
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="isBuilt"><span class="type-signature type-signature-readonly">(readonly) </span>isBuilt<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Pass节点是否已经构建完成。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line77">line 77</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Pass节点是否已经构建完成。</p>
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="library"><span class="type-signature type-signature-readonly">(readonly) </span>library<span class="type-signature"> :<a href="PostProcessingLibrary.html">PostProcessingLibrary</a></span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>后处理库实例</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line26">line 26</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>后处理库实例</p>
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="PostProcessingLibrary.html">PostProcessingLibrary</a></span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="node"><span class="type-signature type-signature-readonly">(readonly) </span>node<span class="type-signature"> :T</span></h4>
+
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>Pass节点，由子类在构建完成后赋值给该属性。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line32">line 32</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Pass节点，由子类在构建完成后赋值给该属性。</p>
+</div>
+
+
+
+    <h5 class="h5-types">Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">T</span>
+
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="build"><span class="type-signature"></span>build<span class="signature">(&hellip;args)</span><span class="type-signature"> &rarr; {Node}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>构建输出节点，由子类实现该方法。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line94">line 94</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>构建参数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>处理后的节点对象</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Node</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="checkBuilt"><span class="type-signature"></span>checkBuilt<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>检查Pass节点是否已经构建完成，如果未构建则抛出错误。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line84">line 84</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-throws">Throws:</h5>
+
+        
+
+    <div class="param-desc usertext">
+    
+        
+<span class="param-type">Error</span>
+
+
+
+    
+    </div>
+
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="dispose"><span class="type-signature"></span>dispose<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="PassNodeProxy.html">PassNodeProxy</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>销毁Pass节点，释放相关资源。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line110">line 110</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回当前实例</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="PassNodeProxy.html">PassNodeProxy</a></span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="rebuild"><span class="type-signature"></span>rebuild<span class="signature">(&hellip;args)</span><span class="type-signature"> &rarr; {Node}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>重新构建Pass节点，先销毁原有节点再调用build方法进行构建。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line102">line 102</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>构建参数</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>处理后的节点对象</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Node</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="setValues"><span class="type-signature"></span>setValues<span class="signature">(values)</span><span class="type-signature"> &rarr; {<a href="PassNodeProxy.html">PassNodeProxy</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li><p>批量设置Pass节点的属性值。</p></li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="PassNodeProxy.js.html">PassNodeProxy.js</a>, <a href="PassNodeProxy.js.html#line46">line 46</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>包含属性键值对的对象</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    <ul>
+<li>返回当前实例</li>
+</ul>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="PassNodeProxy.html">PassNodeProxy</a></span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.5</a> on Wed May 13 2026 11:30:26 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+<script src="scripts/collapse.js" defer></script>
+
+
+</body>
+</html>
