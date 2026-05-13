@@ -50,4 +50,8 @@ const onAnimate = () => {
 onAnimate();
 ```
 
-## [API文档](./docs/index.html)
+## API文档
+
+在线文档（GitHub Pages）：https://lijuhong1981.github.io/tslPostProcessing/
+
+本地预览仍然可以直接打开 [./docs/index.html](./docs/index.html)
