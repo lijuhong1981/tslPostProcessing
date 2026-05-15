@@ -1,6 +1,6 @@
 {
   "name": "@lijuhong1981/postprocessing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "type": "module",
   "module": "index.js",
@@ -40,7 +40,7 @@
   "homepage": "https://github.com/lijuhong1981/tslPostProcessing#readme",
   "dependencies": {
     "@lijuhong1981/jslibs": "^1.4.25",
-    "three": "^0.184.0"
+    "three": ">=0.184.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.2",
