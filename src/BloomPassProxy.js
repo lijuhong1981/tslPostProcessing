@@ -1,7 +1,11 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
-import BloomNode, { bloom } from "three/addons/tsl/display/BloomNode.js";
-import { TextureNode } from "three/webgpu";
+import { bloom } from "three/addons/tsl/display/BloomNode.js";
 import PassNodeProxy from "./PassNodeProxy.js";
+
+/**
+ * @import { TextureNode } from "three/webgpu";
+ * @import BloomNode from "three/addons/tsl/display/BloomNode.js";
+*/
 
 /**
  * BloomPassProxy是PassNodeProxy的一个子类，用于代理Bloom（泛光）后处理特效的Pass节点。

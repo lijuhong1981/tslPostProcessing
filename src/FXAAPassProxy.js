@@ -1,6 +1,10 @@
-import FXAANode, { fxaa } from 'three/addons/tsl/display/FXAANode.js';
-import { TextureNode } from 'three/webgpu';
+import { fxaa } from 'three/addons/tsl/display/FXAANode.js';
 import PassNodeProxy from "./PassNodeProxy.js";
+
+/**
+ * @import { TextureNode } from "three/webgpu";
+ * @import FXAANode from 'three/addons/tsl/display/FXAANode.js';
+*/
 
 /**
  * FXAAPassProxy是PassNodeProxy的一个子类，用于代理FXAA（快速近似抗锯齿）后处理特效的Pass节点。

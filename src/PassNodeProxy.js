@@ -1,8 +1,11 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
 import { defined } from "@lijuhong1981/jscheck/src/isDefined.js";
 import EventSubscriber from "@lijuhong1981/jsevents/src/EventSubscriber.js";
-import { Node } from "three/webgpu";
-import PostProcessingLibrary from "./PostProcessingLibrary.js";
+
+/**
+ * @import PostProcessingLibrary from "./PostProcessingLibrary.js";
+ * @import { Node } from "three/webgpu";
+*/
 
 /**
  * PassNodeProxy是一个针对Node节点对象的代理类，用于管理threejs最新tsl体系下的Node节点对象，对外提供更加友好的接口。

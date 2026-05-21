@@ -1,7 +1,11 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
-import TRAANode, { traa } from 'three/addons/tsl/display/TRAANode.js';
-import { Camera, Node, TextureNode } from 'three/webgpu';
+import { traa } from 'three/addons/tsl/display/TRAANode.js';
 import PassNodeProxy from './PassNodeProxy.js';
+
+/**
+ * @import { Camera, TextureNode } from "three/webgpu";
+ * @import TRAANode from 'three/addons/tsl/display/TRAANode.js';
+*/
 
 /**
  * TRAAPassProxy是TRAANode节点的代理类，用于管理TRAA(Temporal Reprojection Anti-Aliasing)后处理特效的Pass节点。
@@ -82,7 +86,7 @@ class TRAAPassProxy extends PassNodeProxy {
      * @param {TextureNode} depthNode - 深度节点对象
      * @param {TextureNode} velocityNode - 运动节点对象
      * @param {Camera} camera - 相机对象 
-     * @returns {Node} 处理后的节点对象
+     * @returns {TRAANode} 处理后的节点对象
      * @override 
     */
     build(inputNode, depthNode, velocityNode, camera) {

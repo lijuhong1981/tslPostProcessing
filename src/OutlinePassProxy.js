@@ -1,9 +1,14 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
-import { Color, Scene } from "three";
-import OutlineNode, { outline } from './OutlineNode.js';
+import { Color } from "three";
 import { oscSine, time, uniform } from "three/tsl";
-import { TextureNode } from "three/webgpu";
+import { outline } from './OutlineNode.js';
 import PassNodeProxy from "./PassNodeProxy.js";
+
+/**
+ * @import { Camera, Object3D, Scene } from "three";
+ * @import { TextureNode } from "three/webgpu";
+ * @import OutlineNode from './OutlineNode.js';
+*/
 
 /**
  * OutlinePassProxy是PassNodeProxy的一个子类，用于代理Outline（轮廓）后处理特效的Pass节点。

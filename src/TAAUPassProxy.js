@@ -1,6 +1,10 @@
-import TAAUNode, { taau } from 'three/addons/tsl/display/TAAUNode.js';
-import { Camera, Node, TextureNode } from 'three/webgpu';
+import { taau } from 'three/addons/tsl/display/TAAUNode.js';
 import PassNodeProxy from './PassNodeProxy.js';
+
+/**
+ * @import { Camera, TextureNode } from "three/webgpu";
+ * @import TAAUNode from 'three/addons/tsl/display/TAAUNode.js';
+*/
 
 /**
  * TAAUPassProxy是TAAUNode节点的代理类，用于管理TAAU(Temporal Anti-Aliasing Upsampling)后处理特效的Pass节点。
@@ -79,7 +83,7 @@ class TAAUPassProxy extends PassNodeProxy {
      * @param {TextureNode} depthNode - 深度节点对象
      * @param {TextureNode} velocityNode - 运动节点对象
      * @param {Camera} camera - 相机对象
-     * @returns {Node} 处理后的节点对象
+     * @returns {TAAUNode} 处理后的节点对象
      * @override 
     */
     build(inputNode, depthNode, velocityNode, camera) {

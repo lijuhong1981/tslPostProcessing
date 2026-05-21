@@ -1,7 +1,11 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
 import PassNodeProxy from "./PassNodeProxy.js";
-import SSRNode, { ssr } from 'three/addons/tsl/display/SSRNode.js';
-import { Camera, Node, TextureNode } from "three/webgpu";
+import { ssr } from 'three/addons/tsl/display/SSRNode.js';
+
+/**
+ * @import { Camera, Node, TextureNode } from "three/webgpu";
+ * @import SSRNode from 'three/addons/tsl/display/SSRNode.js';
+*/
 
 /**
  * SSRPassProxy是PassNodeProxy的一个子类，用于代理SSR（Screen Space Reflections）后处理特效的Pass节点。

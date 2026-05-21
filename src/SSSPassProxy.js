@@ -1,8 +1,12 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
+import { sss } from 'three/addons/tsl/display/SSSNode.js';
+import { vec3, vec4 } from "three/tsl";
 import PassNodeProxy from "./PassNodeProxy.js";
-import SSSNode, { sss } from 'three/addons/tsl/display/SSSNode.js';
-import { DirectionalLight, Light, Node, PassNode, TextureNode } from "three/webgpu";
-import { builtinShadowContext, screenUV, vec3, vec4 } from "three/tsl";
+
+/**
+ * @import { Camera, DirectionalLight, TextureNode } from "three/webgpu";
+ * @import SSSNode from 'three/addons/tsl/display/SSSNode.js';
+*/
 
 /**
  * SSSPassProxy是PassNodeProxy的一个子类，用于代理SSS（Screen Space Shadows）后处理特效的Pass节点。

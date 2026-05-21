@@ -1,8 +1,12 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
 import PassNodeProxy from "./PassNodeProxy.js";
-import SSGINode, { ssgi } from 'three/addons/tsl/display/SSGINode.js';
-import { Camera, Node, TextureNode } from "three/webgpu";
+import { ssgi } from 'three/addons/tsl/display/SSGINode.js';
 import { add, vec4 } from "three/tsl";
+
+/**
+ * @import { Camera, Node, TextureNode } from "three/webgpu";
+ * @import SSGINode from 'three/addons/tsl/display/SSGINode.js';
+*/
 
 /**
  * SSGIPassProxy是PassNodeProxy的一个子类，用于代理SSGI（Screen Space Global Illumination）后处理特效的Pass节点。

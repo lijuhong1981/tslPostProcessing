@@ -1,8 +1,12 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
-import GTAONode, { ao } from "three/addons/tsl/display/GTAONode.js";
+import { ao } from "three/addons/tsl/display/GTAONode.js";
 import { vec3, vec4 } from "three/tsl";
-import { Camera, TextureNode } from "three/webgpu";
 import PassNodeProxy from "./PassNodeProxy.js";
+
+/**
+ * @import { Camera, TextureNode } from "three/webgpu";
+ * @import GTAONode from "three/addons/tsl/display/GTAONode.js";
+*/
 
 /**
  * GTAOPassProxy是PassNodeProxy的一个子类，用于代理GTAO（Ground Truth Ambient Occlusion）后处理特效的Pass节点。

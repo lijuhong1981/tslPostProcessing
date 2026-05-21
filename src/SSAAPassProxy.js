@@ -1,8 +1,12 @@
 import Check from "@lijuhong1981/jscheck/src/Check.js";
-import { Camera, Scene } from "three";
-import SSAAPassNode, { ssaaPass } from 'three/addons/tsl/display/SSAAPassNode.js';
-import { Node, TextureNode } from "three/webgpu";
+import { ssaaPass } from 'three/addons/tsl/display/SSAAPassNode.js';
 import PassNodeProxy from "./PassNodeProxy.js";
+
+/**
+ * @import { Camera, Scene } from "three";
+ * @import { Node, TextureNode } from "three/webgpu";
+ * @import SSAAPassNode from 'three/addons/tsl/display/SSAAPassNode.js';
+*/
 
 /**
  * SSAAPassProxy是PassNodeProxy的一个子类，用于代理SSAA（超采样抗锯齿）后处理特效的Pass节点。

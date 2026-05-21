@@ -1,13 +1,18 @@
-import { Camera, Scene } from "three";
-import { colorToDirection, diffuseColor, directionToColor, metalness, mrt, normalView, pass, renderOutput, roughness, sample, vec2, velocity } from "three/tsl";
-import { DirectionalLight, RenderPipeline, UnsignedByteType, WebGPURenderer } from "three/webgpu";
-import AntiAliasingPassProxy, { AntiAliasingMethod } from "./AntiAliasingPassProxy.js";
+import { UnsignedByteType } from "three";
+import { diffuseColor, metalness, mrt, normalView, pass, renderOutput, roughness, vec2, velocity } from "three/tsl";
+import { RenderPipeline } from "three/webgpu";
+import { AntiAliasingMethod, AntiAliasingPassProxy } from "./AntiAliasingPassProxy.js";
 import BloomPassProxy from "./BloomPassProxy.js";
 import GTAOPassProxy from "./GTAOPassProxy.js";
 import OutlinePassProxy from "./OutlinePassProxy.js";
 import SSGIPassProxy from "./SSGIPassProxy.js";
 import SSRPassProxy from "./SSRPassProxy.js";
 import SSSPassProxy from "./SSSPassProxy.js";
+
+/**
+ * @import { Camera, DirectionalLight, Scene } from "three";
+ * @import { WebGPURenderer } from "three/webgpu";
+*/
 
 /**
  * 后处理库，用于管理各种后处理特效。
