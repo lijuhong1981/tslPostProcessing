@@ -3,6 +3,8 @@ import { diffuseColor, metalness, mrt, normalView, pass, renderOutput, roughness
 import { RenderPipeline } from "three/webgpu";
 import { AntiAliasingMethod, AntiAliasingPassProxy } from "./AntiAliasingPassProxy.js";
 import BloomPassProxy from "./BloomPassProxy.js";
+import DenoisePassProxy from "./DenoisePassProxy.js";
+import DepthOfFieldPassProxy from "./DepthOfFieldPassProxy.js";
 import GTAOPassProxy from "./GTAOPassProxy.js";
 import OutlinePassProxy from "./OutlinePassProxy.js";
 import SSGIPassProxy from "./SSGIPassProxy.js";
@@ -109,12 +111,32 @@ class PostProcessingLibrary {
                 this.needsUpdate = true;
         });
         /**
+         * 降噪（Denoise）通道实例。
+         * @type {DenoisePassProxy}
+         * @readonly
+        */
+        this.denoisePass = new DenoisePassProxy(this);
+        this.denoisePass.changed.on((key, value) => {
+            if (key === 'enabled')
+                this.needsUpdate = true;
+        });
+        /**
          * 泛光（Bloom）通道实例。
          * @type {BloomPassProxy}
          * @readonly
         */
         this.bloomPass = new BloomPassProxy(this);
         this.bloomPass.changed.on((key, value) => {
+            if (key === 'enabled')
+                this.needsUpdate = true;
+        });
+        /**
+         * 景深（Depth Of Field）通道实例。
+         * @type {DepthOfFieldPassProxy}
+         * @readonly
+        */
+        this.dofPass = new DepthOfFieldPassProxy(this);
+        this.dofPass.changed.on((key, value) => {
             if (key === 'enabled')
                 this.needsUpdate = true;
         });
@@ -153,7 +175,7 @@ class PostProcessingLibrary {
     build(force) {
         if (this.needsUpdate || force) {
             this.disposePasses();
-            const { renderPipeline, aoPass, ssgiPass, ssrPass, sssPass, bloomPass, outlinePass, aaPass, scene, camera, mainLight } = this;
+            const { renderPipeline, aoPass, ssgiPass, ssrPass, sssPass, denoisePass, bloomPass, dofPass, outlinePass, aaPass, scene, camera, mainLight } = this;
             const aaEnabled = aaPass.enabled;
             const aaMethod = aaPass.method;
 
@@ -250,9 +272,17 @@ class PostProcessingLibrary {
             if (sssPass.enabled)
                 outputNode = sssPass.build(sceneDepth, camera, mainLight, outputNode);
             //#endregion
+            //#region denoise-pass
+            if (denoisePass.enabled)
+                outputNode = denoisePass.build(sceneDepth, sceneNormal, camera, outputNode);
+            //#endregion
             //#region  bloom-pass
             if (bloomPass.enabled)
                 outputNode = bloomPass.build(sceneColor, outputNode);
+            //#endregion
+            //#region dof-pass
+            if (dofPass.enabled)
+                outputNode = dofPass.build(prePass.getViewZNode('depth'), outputNode);
             //#endregion
             //#region  outline-pass
             if (outlinePass.enabled)
@@ -321,7 +351,9 @@ class PostProcessingLibrary {
         this.ssgiPass.dispose();
         this.ssrPass.dispose();
         this.sssPass.dispose();
+        this.denoisePass.dispose();
         this.bloomPass.dispose();
+        this.dofPass.dispose();
         this.outlinePass.dispose();
         this.aaPass.dispose();
     }

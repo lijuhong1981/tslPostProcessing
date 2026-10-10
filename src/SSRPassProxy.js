@@ -26,7 +26,8 @@ class SSRPassProxy extends PassNodeProxy {
     }
     /**
      * The resolution scale. Valid values are in the range
-     * `[0,1]`. `1` means best quality but also results in
+     * `[0.1,1]`（最小 0.1 为兼容 three.js SSRNode 模糊 RT 的 mip 限制）。
+     * `1` means best quality but also results in
      * more computational overhead. Setting to `0.5` means
      * the effect is computed in half-resolution.
      *
@@ -35,6 +36,9 @@ class SSRPassProxy extends PassNodeProxy {
      */
     set resolutionScale(value) {
         Check.typeOf.number('resolutionScale', value);
+        // three.js SSRNode 的模糊 RT 带 5 级 mipmap，分辨率过小（min(宽,高)<16px）会导致 WebGPU
+        // 创建纹理失败（mip 级数超限），故限制最小值为 0.1
+        value = Math.min(1, Math.max(0.1, value));
         this._values.resolutionScale = value;
         this.node && (this.node.resolutionScale = value);
     }
@@ -79,7 +83,8 @@ class SSRPassProxy extends PassNodeProxy {
     set opacity(value) {
         Check.typeOf.number('opacity', value);
         this._values.opacity = value;
-        this.node && (this.node.opacity.value = value);
+        // three r185 起 SSRNode 移除了 opacity 属性
+        this.node && this.node.opacity && (this.node.opacity.value = value);
     }
     get opacity() {
         return this._values.opacity;
@@ -113,7 +118,13 @@ class SSRPassProxy extends PassNodeProxy {
     set blurQuality(value) {
         Check.typeOf.number('blurQuality', value);
         this._values.blurQuality = value;
-        this.node && (this.node.blurQuality.value = value);
+        if (this.node && this.node.blurQuality !== undefined) {
+            // r184 为 UniformNode（.value），r185 起改为普通数值属性（getter/setter）
+            if (this.node.blurQuality.value !== undefined)
+                this.node.blurQuality.value = value;
+            else
+                this.node.blurQuality = value;
+        }
     }
     get blurQuality() {
         return this._values.blurQuality;
@@ -131,7 +142,11 @@ class SSRPassProxy extends PassNodeProxy {
      * @override
     */
     build(colorNode, depthNode, normalNode, metalnessNode, roughnessNode, camera, outputNode) {
-        const ssrPass = this.node = ssr(colorNode, depthNode, normalNode, metalnessNode, roughnessNode, camera).toInspector('SSR');
+        // three r185 起 ssr() 由位置参数改为 options 对象（metalnessNode/roughnessNode/camera 通过 options 传入）
+        const ssrPass = this.node = (ssr.length >= 4
+            ? ssr(colorNode, depthNode, normalNode, metalnessNode, roughnessNode, camera)
+            : ssr(colorNode, depthNode, normalNode, { metalnessNode, roughnessNode, camera })
+        ).toInspector('SSR');
         this.setValues(this._values);
         return outputNode.add(ssrPass.rgb);
     }

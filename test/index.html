@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tslPostProcessing 测试</title>
+    <style>
+        html, body { margin: 0; height: 100%; overflow: hidden; background: #000; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+        #toolbar {
+            position: fixed; top: 12px; left: 12px; z-index: 20;
+            display: flex; align-items: center; gap: 8px;
+            color: #fff; background: rgba(20, 20, 30, .75); backdrop-filter: blur(4px);
+            padding: 8px 12px; border-radius: 8px; font-size: 13px;
+        }
+        #toolbar input { width: 110px; padding: 4px 6px; border-radius: 4px; border: 1px solid #444; background: #222; color: #fff; }
+        #toolbar button { padding: 4px 10px; border-radius: 4px; border: 1px solid #555; background: #2a6; color: #fff; cursor: pointer; }
+        #toolbar .hint { color: #999; font-size: 12px; }
+        #error {
+            position: fixed; inset: 0; z-index: 100; display: none;
+            background: rgba(0, 0, 0, .88); color: #ff6b6b; padding: 32px;
+            font-family: ui-monospace, Consolas, monospace; white-space: pre-wrap; font-size: 13px; line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <label for="version">three.js 版本</label>
+        <input id="version" list="versions" spellcheck="false">
+        <datalist id="versions">
+            <option value="0.184.0"></option>
+            <option value="0.185.0"></option>
+            <option value="0.186.0"></option>
+            <option value="0.186.1"></option>
+        </datalist>
+        <button id="apply">应用并刷新</button>
+        <span class="hint" id="hint"></span>
+    </div>
+    <div id="error"></div>
+
+    <script>
+        // ===== 根据 three 版本动态生成 import map =====
+        const CDN_BASE = 'https://unpkg.com'; // 可换成 https://cdn.jsdelivr.net/npm 等
+        const FALLBACK_VERSION = '0.186.1';
+
+        const qs = new URLSearchParams(location.search);
+        let version = (qs.get('three') || '').trim();
+        if (!/^\d+\.\d+\.\d+$/.test(version)) version = FALLBACK_VERSION;
+
+        const threeBase = `${CDN_BASE}/three@${version}`;
+        // 供 main.js 使用（Draco 解码器路径需与 three 版本一致）
+        window.__TSL_TEST__ = { threeVersion: version, cdnBase: CDN_BASE };
+        const importMap = {
+            imports: {
+                'three': `${threeBase}/build/three.module.js`,
+                'three/webgpu': `${threeBase}/build/three.webgpu.js`,
+                'three/tsl': `${threeBase}/build/three.tsl.js`,
+                'three/addons/': `${threeBase}/examples/jsm/`,
+                // 本库：指向本地源码（相对于本页面）
+                '@lijuhong1981/postprocessing': '../index.js',
+                // 本库的运行时依赖（走 CDN）
+                '@lijuhong1981/jscheck/': `${CDN_BASE}/@lijuhong1981/jscheck@1.1.7/`,
+                '@lijuhong1981/jsevents/': `${CDN_BASE}/@lijuhong1981/jsevents@1.2.13/`,
+                '@lijuhong1981/jsdestroy/': `${CDN_BASE}/@lijuhong1981/jsdestroy@1.2.7/`,
+                // GUI
+                '@lijuhong1981/inspector': `${CDN_BASE}/@lijuhong1981/inspector@1.1.0/index.js`,
+            },
+        };
+
+        const imScript = document.createElement('script');
+        imScript.type = 'importmap';
+        imScript.textContent = JSON.stringify(importMap);
+        document.currentScript.after(imScript);
+
+        // 版本选择器
+        const input = document.getElementById('version');
+        input.value = version;
+        document.getElementById('hint').textContent = '0.185 起 SSR/SSGI API 有变化，可切换验证 184~186 兼容';
+        document.getElementById('apply').addEventListener('click', () => {
+            const v = input.value.trim() || FALLBACK_VERSION;
+            location.href = `${location.pathname}?three=${encodeURIComponent(v)}`;
+        });
+        input.addEventListener('keydown', (e) => { if (e.key === 'Enter') document.getElementById('apply').click(); });
+    </script>
+
+    <script type="module">
+        import('./main.js').catch((err) => {
+            const el = document.getElementById('error');
+            el.style.display = 'block';
+            el.textContent =
+                '加载失败：' + (err && err.message ? err.message : err) +
+                '\n\n排查建议：\n' +
+                '1. 请通过 HTTP 服务器访问（如：npx serve 或 python -m http.server），不要直接双击打开文件\n' +
+                '2. 请使用支持 WebGPU 的浏览器（Chrome 113+ / Edge，开启硬件加速）\n' +
+                '3. 若 CDN 无法访问，请修改 index.html 中的 CDN_BASE';
+        });
+    </script>
+</body>
+</html>

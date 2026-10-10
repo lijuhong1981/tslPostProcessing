@@ -4,7 +4,7 @@
 
 ## 功能
 
-1、整合了GTAO（Ground Truth Ambient Occlusion）、SSGI（Screen Space Global Illumination）、SSR（Screen Space Reflections）、SSS（Screen Space Shadows）、泛光（Bloom）、轮廓（Outline）以及FXAA（快速近似抗锯齿）、SMAA（增强型多重采样抗锯齿）、SSAA（超采样抗锯齿）、TAAU(Temporal Anti-Aliasing Upsampling)、TRAA(Temporal Reprojection Anti-Aliasing)等多种抗锯齿（Anti-Aliasing）后处理特效，并根据所启用的特效自动配置在渲染管线中的渲染顺序；
+1、整合了GTAO（Ground Truth Ambient Occlusion）、SSGI（Screen Space Global Illumination）、SSR（Screen Space Reflections）、SSS（Screen Space Shadows）、降噪（Denoise）、泛光（Bloom）、景深（Depth Of Field）、轮廓（Outline）以及FXAA（快速近似抗锯齿）、SMAA（增强型多重采样抗锯齿）、SSAA（超采样抗锯齿）、TAAU(Temporal Anti-Aliasing Upsampling)、TRAA(Temporal Reprojection Anti-Aliasing)等多种抗锯齿（Anti-Aliasing）后处理特效，并根据所启用的特效自动配置在渲染管线中的渲染顺序；
 
 2、开箱即用，对tsl的API进行了封装，简化后处理节点API的调用；
 
@@ -40,6 +40,9 @@ postProcessor.aoPass.enabled = true; //开启AO，默认false
 // postProcessor.ssgiPass.enabled = true; //开启SSGI，默认false
 // postProcessor.ssrPass.enabled = true; //开启SSR，默认false
 postProcessor.bloomPass.enabled = true; //开启Bloom，默认false
+// postProcessor.denoisePass.enabled = true; //开启降噪，默认false，可配合AO/SSGI/SSR/SSS关闭时域滤波时使用
+// postProcessor.dofPass.enabled = true; //开启景深，默认false
+// postProcessor.dofPass.focusDistance = 5; //调节景深焦点距离
 // postProcessor.aaPass.enabled = true; //开启抗锯齿，如果WebGPURenderer开启了antialias则默认false，否则默认true
 // postProcessor.aaPass.method = AntiAliasingMethod.SMAA; //使用SMAA，默认FXAA
 // postProcessor.outlinePass.selectedObjects = [...]; //指定选中对象

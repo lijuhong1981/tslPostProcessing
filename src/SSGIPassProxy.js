@@ -208,13 +208,13 @@ class SSGIPassProxy extends PassNodeProxy {
     build(colorNode, depthNode, normalNode, camera, diffuseNode, outputNode) {
         const ssgiPass = this.node = ssgi(colorNode, depthNode, normalNode, camera);
         this.setValues(this._values);
-        const gi = ssgiPass.rgb.toInspector('SSGI');
-        const ao = ssgiPass.a.toInspector('SSAO');
-        // const compositePass = vec4(add(outputNode.rgb.mul(ao), (diffuseNode.rgb.mul(gi))), outputNode.a);
-        // compositePass.name = 'SSGI-Composite';
-        // return compositePass;
-        outputNode.rgb.mul(ao).add(diffuseNode.rgb.mul(gi));
-        return outputNode;
+        // three r185 起 SSGI 输出由 .rgb(GI)/.a(AO) 改为 getGINode()/getAONode()
+        const gi = (typeof ssgiPass.getGINode === 'function' ? ssgiPass.getGINode().rgb : ssgiPass.rgb).toInspector('SSGI');
+        const ao = (typeof ssgiPass.getAONode === 'function' ? ssgiPass.getAONode().r : ssgiPass.a).toInspector('SSAO');
+        // 合成：output * AO + diffuse * GI（需显式返回合成结果，TSL 节点不可变，不能靠 in-place 修改）
+        const compositePass = vec4(add(outputNode.rgb.mul(ao), diffuseNode.rgb.mul(gi)), outputNode.a);
+        compositePass.name = 'SSGI-Composite';
+        return compositePass;
     }
 };
 

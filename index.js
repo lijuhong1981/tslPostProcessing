@@ -1,5 +1,7 @@
 export * from './src/AntiAliasingPassProxy.js';
 export * from './src/BloomPassProxy.js';
+export * from './src/DenoisePassProxy.js';
+export * from './src/DepthOfFieldPassProxy.js';
 export * from './src/FXAAPassProxy.js';
 export * from './src/GTAOPassProxy.js';
 export * from './src/OutlineNode.js';

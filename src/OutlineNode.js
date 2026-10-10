@@ -783,6 +783,8 @@ class OutlineNode extends TempNode {
 		this._separableBlurMaterial2.dispose();
 		this._compositeMaterial.dispose();
 
+		super.dispose();
+
 	}
 
 	/**
