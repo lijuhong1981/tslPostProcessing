@@ -1,6 +1,6 @@
 {
   "name": "@lijuhong1981/postprocessing",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "type": "module",
   "module": "index.js",
@@ -56,10 +56,14 @@
   },
   "homepage": "https://github.com/lijuhong1981/tslPostProcessing#readme",
   "dependencies": {
-    "@lijuhong1981/jslibs": "^1.4.25",
+    "@lijuhong1981/jscheck": "^1.1.8",
+    "@lijuhong1981/jsevents": "^1.2.14"
+  },
+  "peerDependencies": {
     "three": ">=0.184.0"
   },
   "devDependencies": {
+    "three": ">=0.184.0",
     "@rollup/plugin-commonjs": "^29.0.2",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
