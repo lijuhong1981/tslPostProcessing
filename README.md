@@ -15,14 +15,14 @@
 ## 安装
 
 ```bash
-npm install @lijuhong1981/postprocessing
+npm install @lijuhong1981/tsl.postprocessing
 ```
 
 ## 使用
 
 ```js
 import { WebGPURenderer, Scene, PerspectiveCamera, DirectionalLight } from "three/webgpu";
-import { PostProcessingLibrary, AntiAliasingMethod } from "@lijuhong1981/postprocessing";
+import { PostProcessingLibrary, AntiAliasingMethod } from "@lijuhong1981/tsl.postprocessing";
 
 const renderer = new WebGPURenderer();
 const scene = new Scene();

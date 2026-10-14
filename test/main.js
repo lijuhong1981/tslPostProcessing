@@ -6,7 +6,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import Inspector from '@lijuhong1981/inspector';
-import { PostProcessingLibrary, AntiAliasingMethod } from '@lijuhong1981/postprocessing';
+import { PostProcessingLibrary, AntiAliasingMethod } from '@lijuhong1981/tsl.postprocessing';
 
 if (!('gpu' in navigator)) {
     throw new Error('当前浏览器不支持 WebGPU，请使用 Chrome 113+ / Edge 并开启硬件加速');
